@@ -1,24 +1,16 @@
-package com.example.demo.model;
+package com.example.demo.controller;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-@Entity
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class LoginRequest {
+    private String userType; // This should be "Admin" or "Normal User"
     private String name;
     private String email;
     private String phoneNumber;
     private String password;
-    public Long getId() {
-        return id;
+    public String getUserType() {
+        return userType;
     }
-    public void setId(Long id) {
-        this.id = id;
+    public void setUserType(String userType) {
+        this.userType = userType;
     }
     public String getName() {
         return name;
